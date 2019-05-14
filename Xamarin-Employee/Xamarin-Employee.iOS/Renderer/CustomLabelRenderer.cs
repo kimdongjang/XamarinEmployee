@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
@@ -13,6 +14,7 @@ using Xamarin_Employee.Model.Custom;
 [assembly: ExportRenderer(typeof(CustomLabel), typeof(CustomLabelRenderer))]
 namespace Xamarin_Employee.iOS.Renderer
 {
+    [DesignTimeVisible(true)]
     public class CustomLabelRenderer : LabelRenderer
     {
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
@@ -32,7 +34,7 @@ namespace Xamarin_Employee.iOS.Renderer
                 label.LineBreakMode = UILineBreakMode.Clip;
 
                 CustomLabel control_label = e.NewElement as CustomLabel;
-                label.Font = UIFont.FromName("NANUMSQUAREROUNDB", control_label.Size);
+                label.Font = UIFont.FromName("NANUMSQUAREROUNDB", (int)control_label.FontSize);
             }
         }
     }

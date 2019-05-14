@@ -19,13 +19,13 @@
         </Grid.RowDefinitions>
 
         <!-- BindingMode TwoWay == 데이터가 원본과 대상에서 양방향으로 이동-->
-        <Grid Grid.Row="3" >
+        <Grid Grid.Row="2" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Entry Grid.Column="0" Text="{Binding UserID, Mode=TwoWay}" Placeholder="유저아이디" Style="{StaticResource St_Entry_Login}"/>
-            <Button Grid.Column="1" Text="로그인" Command="{Binding Cm_LoginBtn}" CommandParameter="UserID"/>
+            <Button Grid.Column="1" Text="로그인" Command="{Binding Cm_LoginBtn}" Style="{StaticResource St_Btn_Login}"/>
         </Grid>
         
     </Grid>

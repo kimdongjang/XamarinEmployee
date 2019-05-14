@@ -13,8 +13,7 @@ namespace Xamarin_Employee.ViewModel
     {
         public LoginPageViewModel()
         {
-            this._UserID = "유저아이디";
-
+            // 로그인 함수 커맨드를 등록
             Cm_LoginBtn = new Command(Login);
         }
 
@@ -64,6 +63,8 @@ namespace Xamarin_Employee.ViewModel
             UserModel user = new UserModel();
             user.UserID = _UserID;
             user.UserPW = _UserPW;
+
+            UserDataList.Add(user);
 
             // 아이디, 패스워드 일치 확인
             _UserID = "";

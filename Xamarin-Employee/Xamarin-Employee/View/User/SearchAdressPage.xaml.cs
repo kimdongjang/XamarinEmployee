@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace Xamarin_Employee.View
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace Xamarin_Employee.View.User
 {
-    public partial class LoginPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class SearchAdressPage : ContentPage
     {
-        public LoginPage()
+        public SearchAdressPage()
         {
             InitializeComponent();
         }

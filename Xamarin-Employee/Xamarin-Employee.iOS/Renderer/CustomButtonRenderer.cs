@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
@@ -13,6 +14,7 @@ using Xamarin_Employee.Model.Custom;
 [assembly: ExportRenderer(typeof(CustomButton), typeof(CustomButtonRenderer))]
 namespace Xamarin_Employee.iOS.Renderer
 {
+    [DesignTimeVisible(true)]
     public class CustomButtonRenderer : ButtonRenderer
     {
         protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
@@ -31,7 +33,7 @@ namespace Xamarin_Employee.iOS.Renderer
                 //label.LineBreakMode = UILineBreakMode.Clip;
 
                 CustomButton control_label = e.NewElement as CustomButton;
-                label.Font = UIFont.FromName("NANUMSQUAREROUNDB", control_label.Size);
+                label.Font = UIFont.FromName("NANUMSQUAREROUNDB", (int)control_label.FontSize);
             }
         }
     }

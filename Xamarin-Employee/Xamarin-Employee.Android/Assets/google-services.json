@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "462435393453",
+    "firebase_url": "https://employee-8589a.firebaseio.com",
+    "project_id": "employee-8589a",
+    "storage_bucket": "employee-8589a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462435393453:android:2bb4dfc5de683471",
+        "android_client_info": {
+          "package_name": "com.companyname.Xamarin_Employee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqX3RZ5nvetnooYKR1Lr_NhJ6SASngKYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462435393453-bfauevm27hop4utgk4ttq2g1nb137gtt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

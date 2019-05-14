@@ -26,7 +26,7 @@ namespace Xamarin_Employee.Droid.Renderer
 
             CustomLabel control_label = e.NewElement as CustomLabel;
             var label = (TextView)Control;
-            label.SetTextSize(Android.Util.ComplexUnitType.Dip, control_label.Size);
+            label.SetTextSize(Android.Util.ComplexUnitType.Dip, (int)control_label.FontSize);
 
             Typeface font = Typeface.CreateFromAsset(Forms.Context.Assets, "NANUMSQUAREROUNDB.TTF");
             label.Typeface = font;

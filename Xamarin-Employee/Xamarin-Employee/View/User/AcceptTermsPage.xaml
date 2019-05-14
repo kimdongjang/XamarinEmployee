@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Xamarin_Employee.ViewModel.User"
+             xmlns:custom="clr-namespace:Xamarin_Employee.Model.Custom"
+             x:Class="Xamarin_Employee.View.User.AcceptTermsPage">
+    <ContentPage.BindingContext>
+        <vm:AcceptTermsPageViewModel />
+    </ContentPage.BindingContext>
+    <Grid x:Name="MainGrid" BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!--#region 1행 커스텀 액션바 -->
+        <Grid Grid.Row="1" BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+
+            <!--#region 0열 백버튼 등 이미지-->
+            <Image Grid.Column="0" Margin="10,0,0,0" Source="backbutton_icon.png" x:Name="Image_BackButton" Style="{StaticResource St_Image_Title_BackButton}"/>
+            <!--#endregion-->
+
+            <!--#region 1열 액션바 타이틀-->
+            <custom:CustomLabel Grid.Column="1" Text="약관동의" Style="{StaticResource St_Label_Title}" FontSize="18"/>
+            <!--#endregion-->
+
+        </Grid>
+        <!--#endregion-->
+
+
+        <!-- BindingMode TwoWay == 데이터가 원본과 대상에서 양방향으로 이동-->
+        <Grid Grid.Row="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!--#region 0열 전체 선택 라디오버튼-->
+            <Grid Grid.Row="0" VerticalOptions="Center" HorizontalOptions="End" x:Name="Btn_SelectAll">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <custom:CustomLabel Grid.Column="0" Text="전체 선택" TextColor="Black" VerticalOptions="Center" Style="{StaticResource St_Label_Nature}"/>
+                <Image Grid.Column="1" Source="radio_unchecked_icon.png" BackgroundColor="White" VerticalOptions="Center" Margin="0,0,10,0"/>
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region 1열 전체 선택 라디오버튼-->
+            <Grid Grid.Row="1" x:Name="Btn_SelectOne">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <custom:CustomLabel Grid.Column="0" Text="~~ 이용약관 동의" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" TextDecorations="Underline"
+                                    Style="{StaticResource St_Label_Nature}"  Margin="10,0,0,0"/>
+                <Image Grid.Column="2" Source="radio_unchecked_icon.png" BackgroundColor="White" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,10,0"/>
+            </Grid>
+            <!--#endregion-->
+
+
+            <!--#region 2열  이용약관 라디오버튼-->
+            <Grid Grid.Row="2" x:Name="Btn_SelectTwo">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <custom:CustomLabel Grid.Column="0" Text="~~ 이용약관 동의" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" TextDecorations="Underline"
+                                    Style="{StaticResource St_Label_Nature}" Margin="10,0,0,0"/>
+                <Image Grid.Column="2" Source="radio_unchecked_icon.png" BackgroundColor="White" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,10,0"/>
+            </Grid>
+            <!--#endregion-->
+
+
+            <!--#region 3열 개인정보 라디오버튼-->
+            <Grid Grid.Row="3" x:Name="Btn_SelectThree">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <custom:CustomLabel Grid.Column="0" Text="개인정보 수집이용 동의" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" TextDecorations="Underline"
+                                    Style="{StaticResource St_Label_Nature}" Margin="10,0,0,0"/>
+                <Image Grid.Column="2" Source="radio_unchecked_icon.png" BackgroundColor="White" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,10,0"/>
+            </Grid>
+            <!--#endregion-->
+        </Grid>
+        <!--#endregion-->
+    </Grid>
+</ContentPage>
