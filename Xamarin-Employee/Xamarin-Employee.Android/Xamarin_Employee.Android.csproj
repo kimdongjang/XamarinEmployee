@@ -42,7 +42,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
-    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -115,16 +119,16 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Xamarin-Employee\Xamarin_Employee.csproj">
-      <Project>{fe3eb830-d61d-4309-8852-66b2eddfd583}</Project>
-      <Name>Xamarin_Employee</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\radio_checked_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\radio_unchecked_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xamarin-Employee\Xamarin_Employee.csproj">
+      <Project>{fe3eb830-d61d-4309-8852-66b2eddfd583}</Project>
+      <Name>Xamarin_Employee</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

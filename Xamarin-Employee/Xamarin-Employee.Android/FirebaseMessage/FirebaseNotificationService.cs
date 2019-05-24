@@ -35,8 +35,8 @@ namespace Xamarin_Employee.Droid
             SendNotification(message.GetNotification().Title, message.GetNotification().Body, message.Data);
 
         }
-
-        void SendNotification(string messageTitle, string messageBody, IDictionary<string, string> data)
+        // 앱이 백그라운드 상태에 있다면 시스템 트레이를 통하여 Notificiation이 표시가되고 포어그라운드 상태에 있다면 onMessageReceived를 통해 데이터가 처리됩니다.
+       void SendNotification(string messageTitle, string messageBody, IDictionary<string, string> data)
         {
             var intent = new Intent(this, typeof(MainActivity));
             intent.AddFlags(ActivityFlags.ClearTop);

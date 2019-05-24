@@ -24,8 +24,7 @@ namespace Xamarin_Employee.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
-            Global.myPushToken = FirebaseInstanceId.Instance.Token; // My Token
+            
             IsPlayServicesAvailable();
             CreateNotificationChannel();
 
@@ -33,8 +32,9 @@ namespace Xamarin_Employee.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
+        
 
-
+        // 구글 플레이 서비스가 실행되는지 확인
         public bool IsPlayServicesAvailable()
         {
             int resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(this);
@@ -55,6 +55,8 @@ namespace Xamarin_Employee.Droid
                 return true;
             }
         }
+
+        // 
         void CreateNotificationChannel()
         {
             if (Build.VERSION.SdkInt < BuildVersionCodes.O)

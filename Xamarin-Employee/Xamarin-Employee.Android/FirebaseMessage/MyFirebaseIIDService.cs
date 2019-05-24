@@ -22,6 +22,7 @@ namespace Xamarin_Employee.Droid
         public override void OnTokenRefresh()
         {
             var refreshedToken = FirebaseInstanceId.Instance.Token;
+            Global.myPushToken = refreshedToken; // My Token
             Log.Debug(TAG, "Refreshed token: " + refreshedToken);
             SendRegistrationToServer(refreshedToken);
         }
